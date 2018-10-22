@@ -1,3 +1,4 @@
+
 package br.edu.cairu.app.web.integra.cairu.projetos.database.dbclass;
         
 import java.io.Serializable;
@@ -6,10 +7,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
-/**
- *
- * @author Silas Souza
- */
+
+
 @Entity
 @Table(name = "aluno")
 public class Componente implements Serializable {
