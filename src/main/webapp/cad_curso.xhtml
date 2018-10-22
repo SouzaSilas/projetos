@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <head>
+        <title>Cadastro de curso</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <h1>Cadastro de curso</h1>
+         <a href="index.html">Voltar à página inicial</a>
+        <h:form>
+            <h:panelGrid>
+                <h:outputText value="Curso:"/> 
+                <h:inputText value="#{cursoBean.curso.nome}"></h:inputText>
+            </h:panelGrid><br/>    
+                <h:commandButton value="Cadastrar" action="#{cursoBean.salvar()}"></h:commandButton>
+                <h:commandButton value="Alterar" action="#{cursoBean.atualizar()}"></h:commandButton>
+                <h:commandButton value="Remover" action="#{cursoBean.excluir()}"></h:commandButton>
+                <h:commandButton value="Consultar" action="#{cursoBean.buscar()}"></h:commandButton>
+            <br></br>
+            <br/>
+            <h1>TESTE - Lista de Cursos:</h1>    
+            <h:dataTable value="#{cursoBean.cursos}" var="c">
+                <h:column>
+                    <h:outputText value="Curso:"/>
+                    <h:outputText value="#{c.nome}"/> 
+                </h:column>
+            </h:dataTable>
+        </h:form>    
+    </body>
+</html>

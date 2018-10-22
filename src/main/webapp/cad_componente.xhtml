@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Cadastro de componente de projeto</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:body>
+        <h1>Cadastro de componente de projeto</h1>
+         <a href="index.html">Voltar à página inicial</a>
+        <h:form>
+            <h:panelGrid>
+                <h:outputText value="Matrícula:"/> 
+                <h:inputText value="#{componenteBean.componente.mat_aluno}"></h:inputText>
+                <h:outputText value="Nome:"/> 
+                <h:inputText value="#{componenteBean.componente.nome_aluno}"></h:inputText>
+                <h:outputText value=" Nome social:"/> 
+                <h:inputText value="#{componenteBean.componente.nome_social}"></h:inputText>
+                <h:outputText value="Senha:"/> 
+                <h:inputText value="#{componenteBean.componente.senha}"></h:inputText>
+                <h:commandButton value="Cadastrar" action="#{componenteBean.salvar()}"></h:commandButton>
+            </h:panelGrid>    
+            <br/>
+            <h1>Lista de componentes:</h1>    
+            <h:dataTable value="#{componenteBean.componentes}" var="e">
+                 <h:column>
+                    <h:outputText value="Matrícula:"/>
+                    <h:outputText value="#{e.mat_aluno}"/>
+                </h:column>
+                <h:column> 
+                    <h:outputText value="Nome:"/> 
+                    <h:outputText value="#{e.nome_aluno}"/> 
+                </h:column>
+                <h:column>
+                    <h:outputText value="Nome social:"/> 
+                    <h:outputText value="#{e.nome_social}"/> 
+                </h:column>
+                <h:column> 
+                    <h:outputText value="Senha:"/> 
+                    <h:outputText value="#{e.senha}"/> 
+                </h:column>
+            </h:dataTable>
+        </h:form> 
+    </h:body>
+</html>
