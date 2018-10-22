@@ -19,6 +19,9 @@
                 <h:outputText value="Senha:"/> 
                 <h:inputText value="#{equipeBean.componente.aluno.senha}"></h:inputText>
                 <h:commandButton value="Cadastrar" action="#{equipeBean.salvar()}"></h:commandButton>
+                <h:commandButton value="Alterar" action="#{equipeBean.atualizar()}"></h:commandButton>
+                <h:commandButton value="Remover" action="#{equipeBean.excluir()}"></h:commandButton>
+                <h:commandButton value="Consultar" action="#{equipeBean.buscar()}"></h:commandButton>
             </h:panelGrid>    
             <br/>
             <h1>TESTE - Lista de componentes:</h1>    
