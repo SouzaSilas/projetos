@@ -13,10 +13,7 @@ package br.edu.cairu.app.web.integra.cairu.projetos.database.dbclass;
     import javax.persistence.Id ;
     import javax.persistence.Table ;
 
-    /**
-     *
-     * @author everton
-     */
+   
     @Entity
     @Table(name = "curso")
     public class Curso implements Serializable {
